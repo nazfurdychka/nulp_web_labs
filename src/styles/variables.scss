@@ -1,0 +1,52 @@
+$background-img: "../img/background.png";
+$header-background-img: "../img/header-background.jpeg";
+
+$login-button-color: #ffffff;
+$signup-button-color: #ffffff;
+
+$login-button-hover-color: #df03fc;
+$signup-button-hover-color: #df03fc;
+
+$profile-button-color: purple;
+$profile-button-hover-color: pink;
+
+$white-color: white;
+
+@mixin background-image(){
+  background-image:url($background-img);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+@mixin form($height, $width){
+  height: $height;
+  width: $width;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  flex-direction: column;
+}
+
+@mixin button-hover($color) {
+  background-color: $color;
+  transform: scale(1.1)
+}
+
+@mixin submit-button($button-color, $button-hover-color){
+  margin-top: 10px;
+  width: 50%;
+  background-color: $button-color;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 25px;
+  align-self: center;
+  cursor: pointer;
+  &:hover {
+    @include button-hover($button-hover-color);
+  }
+}
