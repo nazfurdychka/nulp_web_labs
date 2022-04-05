@@ -18,7 +18,7 @@ body{
 }
 
 .register_form{
-  @include form(550px, 600px);
+  @include form(600px, 600px);
 }
 
 .row_input{
@@ -26,6 +26,12 @@ body{
   flex-direction: row;
   justify-content: space-between;
   margin: 20px;
+}
+
+.error_message{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .field_input{

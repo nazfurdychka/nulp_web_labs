@@ -5,13 +5,16 @@
     <title>Profile</title>
     <link rel="stylesheet" href="../styles/profile.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="icon" href="data:;base64,=">
 </head>
 <body>
 
 <div class="topnav">
-    <a class="active" href="../src/profile.html">Profile</a>
-    <a href="../src/profile.html">Courses</a>
-    <a href="../src/profile.html">Joining Requests</a>
+    <a class="active" href="./src/templates/profile.html">Profile</a>
+    <a href="profile.html">Courses</a>
+    <a href="profile.html">Joining Requests</a>
+    <a href="login.html" id="logout_button">Logout</a>
+
 </div>
 
 <div class="wrapper">
@@ -20,21 +23,23 @@
     </div>
     <form class="user-profile-form">
         <h3>First name:</h3>
-        <input type="text" class="user_profile__input" id="first-name" value="Nazar">
+        <input type="text" class="user_profile__input" id="first_name">
         <h3>Second name:</h3>
-        <input type="text" class="user_profile__input" id="second-name" value="Furdychka">
+        <input type="text" class="user_profile__input" id="last_name" >
         <h3>Username:</h3>
-        <input type="text" class="user_profile__input" id="login" value="nazar_furdychka">
+        <input type="text" class="user_profile__input" id="username" >
         <h3>Password:</h3>
         <input type="password" class="user_profile__input" id="password" value="">
         <h3>Confirm password:</h3>
-        <input type="password" class="user_profile__input" id="repeated-password" value="">
+        <input type="password" class="user_profile__input" id="confirm_password" value="">
+        <div id="error-message"></div>
         <div class="button-wrapper">
-            <button type="submit" class="user-profile-button">Save Changes</button>
-            <button type="reset" class="user-profile-button">Reset Changes</button>
-            <button type="button" class="user-profile-button">Delete Account</button>
+            <button type="submit" id="save_button" class="user-profile-button">Save Changes</button>
+            <button type="button" id="reset_button" class="user-profile-button">Reset Changes</button>
+            <button type="button" id="delete_button" class="user-profile-button">Delete Account</button>
         </div>
     </form>
 </div>
+<script src="../scripts/profile.js"></script>
 </body>
 </html>
