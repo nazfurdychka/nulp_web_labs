@@ -24,7 +24,7 @@ body {
 }
 
 .register_form {
-  height: 600px;
+  height: 550px;
   width: 600px;
   display: flex;
   background-color: rgba(255, 255, 255, 0.5);
@@ -38,12 +38,6 @@ body {
   flex-direction: row;
   justify-content: space-between;
   margin: 20px;
-}
-
-.error_message {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  text-align: center;
 }
 
 .field_input {

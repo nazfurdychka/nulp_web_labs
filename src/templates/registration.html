@@ -8,7 +8,6 @@
     <title>Registration</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
     <link rel="stylesheet" href="../styles/registration.css">
-    <link rel="icon" href="data:;base64,=">
 </head>
 
 <body>
@@ -18,24 +17,24 @@
         <div class="row_input">
             <div class="form_input">
                 <h3>Enter first name:</h3>
-                <input class="field_input" type="text" id="first_name" placeholder="First name" required>
+                <input class="field_input" type="text" placeholder="First name" required>
             </div>
             <div class="form_input">
                 <h3>Enter last name:</h3>
-                <input class="field_input" type="text" id="last_name" placeholder="Last name" required>
+                <input class="field_input" type="text" placeholder="Last name" required>
             </div>
         </div>
         <div class="row_input">
             <div class="form_input">
                 <h3>Enter username:</h3>
-                <input class="field_input" type="text" id="username" placeholder="Username" required>
+                <input class="field_input" type="text" placeholder="Username" required>
             </div>
             <div class="selector">
                 <h3>Choose a user type:</h3>
                 <div class="custom-select">
-                    <select class="user-type" id="user-type-selector">
-                        <option value="1">Student</option>
-                        <option value="2">Lector</option>
+                    <select class="user-type">
+                        <option class="selection-option" value="student">Student</option>
+                        <option value="lecturer">Lecturer</option>
                     </select>
                 </div>
             </div>
@@ -43,18 +42,16 @@
         <div class="row_input">
             <div class="form_input">
                 <h3>Enter password:</h3>
-                <input class="field_input" id="password" type="password" placeholder="Password">
+                <input class="field_input" type="text" placeholder="Password">
             </div>
             <div class="form_input">
                 <h3>Confirm password:</h3>
-                <input class="field_input" type="password" id="confirm_password" placeholder="Confirm password">
+                <input class="field_input" type="text" placeholder="Confirm password">
             </div>
         </div>
-        <div id="error-message"></div>
         <button class="register_button" type="submit">Sign up</button>
         <div class="form_footer">Already registered? <a href="login.html">Log in!</a></div>
     </form>
 </div>
-<script src="../scripts/registration.js"></script>
 </body>
 </html>
