@@ -26,7 +26,7 @@ async function loginButtonHandler(event) {
         password: password.value,
     };
 
-    const hash = btoa(username.value + ':' + password.value);
+    const hash = btoa(`${username.value}:${password.value}`);
     loginUser(userData)
         .then(async (response) => {
             if (response.status !== 200) {

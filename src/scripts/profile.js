@@ -18,7 +18,7 @@ if (!currentUser) {
 
 function getUser() {
     const headers = new Headers();
-    headers.set('Authorization', 'Basic ' + window.localStorage.getItem('logged_in_user'));
+    headers.set('Authorization', `Basic ${window.localStorage.getItem('logged_in_user')}`);
     headers.set('content-type', 'application/json');
     fetch(backendUrl + getCurrentUserCreds()[0], {
         method: 'GET',
@@ -43,7 +43,7 @@ function getUser() {
 
 function deleteUser() {
     const headers = new Headers();
-    headers.set('Authorization', 'Basic ' + window.localStorage.getItem('logged_in_user'));
+    headers.set('Authorization', `Basic ${window.localStorage.getItem('logged_in_user')}`);
     headers.set('content-type', 'application/json');
     fetch(backendUrl + getCurrentUserCreds()[0], {
         method: 'DELETE',
@@ -56,7 +56,7 @@ function deleteUser() {
 
 function updateUser(userData) {
     const headers = new Headers();
-    headers.set('Authorization', 'Basic ' + window.localStorage.getItem('logged_in_user'));
+    headers.set('Authorization', `Basic ${window.localStorage.getItem('logged_in_user')}`);
     headers.set('content-type', 'application/json');
     return fetch(backendUrl + getCurrentUserCreds()[0], {
         method: 'PUT',
@@ -96,9 +96,9 @@ async function saveButtonHandler(event) {
             let token;
 
             if (typeof userData.password !== 'undefined') {
-                token = userData.username + ':' + userData.password;
+                token = `${userData.username}:${userData.password}`;
             } else {
-                token = userData.username + ':' + getCurrentUserCreds()[1];
+                token = `${userData.username}:${getCurrentUserCreds()[1]}`;
             }
 
             const hash = btoa(token);
