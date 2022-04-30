@@ -1,0 +1,43 @@
+@import "nullable.scss";
+@import "variables.scss";
+
+html {
+  height: 100%;
+}
+
+body {
+  @include background-image;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.topnav {
+  overflow: hidden;
+  background-image: url($header-background-img);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+
+  a {
+    float: left;
+    color: $white-color;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  a:hover {
+    background-color: $white-color;
+    color: black;
+  }
+
+  a.active {
+    background-color: rgb(216, 52, 235);
+    color: $white-color;
+  }
+}

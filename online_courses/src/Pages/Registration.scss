@@ -1,18 +1,12 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+@import "nullable.scss";
+@import "variables.scss";
 
 html {
   height: 100%;
 }
 
 body {
-  background-image: url("../img/background.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include background-image;
   height: 100%;
 }
 
@@ -24,13 +18,7 @@ body {
 }
 
 .register_form {
-  height: 600px;
-  width: 600px;
-  display: flex;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  flex-direction: column;
+  @include form(675px, 600px);
 }
 
 .row_input {
@@ -47,7 +35,7 @@ body {
 }
 
 .field_input {
-  border: 5px solid white;
+  border: 5px solid $white-color;
   border-radius: 20px;
   margin-top: 20px;
 }
@@ -62,15 +50,18 @@ body {
 .selector {
   display: flex;
   flex-direction: column;
-}
-.selector .custom-select {
   margin-top: 20px;
-}
-.selector .custom-select .user-type {
-  width: 150px;
-  height: 30px;
-  background-color: white;
-  border-radius: 20px;
+
+  .custom-select {
+    margin-top: 20px;
+
+    .user-type {
+      width: 150px;
+      height: 30px;
+      background-color: $white-color;
+      border-radius: 20px;
+    }
+  }
 }
 
 .form_footer {
@@ -80,36 +71,19 @@ body {
 }
 
 .register_button {
-  margin-top: 10px;
-  width: 50%;
-  background-color: #ffffff;
-  color: #080710;
-  padding: 15px 0;
-  font-size: 18px;
-  font-weight: 600;
-  border-radius: 25px;
-  align-self: center;
-  cursor: pointer;
-}
-.register_button:hover {
-  background-color: #df03fc;
-  transform: scale(1.1);
+  @include submit-button($signup-button-color, $signup-button-hover-color);
 }
 
 @media screen and (max-width: 600px) {
   .form_header {
     font-size: 15px;
   }
-
   .form_footer {
     font-size: 15px;
   }
-
   .register_button {
     width: 30%;
     font-size: 15px;
     font-weight: 600;
   }
 }
-
-/*# sourceMappingURL=Registration.css.map */
