@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+.root-wrapper {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+body {
+  background-image: url("../../img/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-profile-form {
+  padding: 20px;
+  height: 400px;
+  width: 500px;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user-image {
+  display: flex;
+  margin: 20px;
+  width: 500px;
+  height: 425px;
+}
+.user-image .user_profile_img {
+  border-radius: 50%;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-profile-button {
+  margin-top: 10px;
+  width: 50%;
+  background-color: purple;
+  color: white;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 40px;
+  align-self: center;
+  cursor: pointer;
+}
+.user-profile-button:hover {
+  background-color: pink;
+}
+
+@media screen and (max-width: 600px) {
+  .user-image {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=Profile.css.map */
