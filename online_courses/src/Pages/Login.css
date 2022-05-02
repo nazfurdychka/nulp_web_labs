@@ -16,6 +16,10 @@ body {
   height: 100%;
 }
 
+#root {
+  height: 100%;
+}
+
 .wrapper {
   height: 100%;
   display: flex;
@@ -23,33 +27,14 @@ body {
   align-items: center;
 }
 
-.register_form {
-  height: 600px;
-  width: 600px;
+.login_form {
+  height: 440px;
+  width: 400px;
   display: flex;
   background-color: rgba(255, 255, 255, 0.5);
   border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   flex-direction: column;
-}
-
-.row_input {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 20px;
-}
-
-.error_message {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.field_input {
-  border: 5px solid white;
-  border-radius: 20px;
-  margin-top: 20px;
 }
 
 .form_header {
@@ -59,27 +44,13 @@ body {
   margin: 0;
 }
 
-.selector {
-  display: flex;
-  flex-direction: column;
-}
-.selector .custom-select {
-  margin-top: 20px;
-}
-.selector .custom-select .user-type {
-  width: 150px;
-  height: 30px;
-  background-color: white;
-  border-radius: 20px;
-}
-
 .form_footer {
   font-size: 20px;
   align-self: center;
   margin-top: 50px;
 }
 
-.register_button {
+.login_button {
   margin-top: 10px;
   width: 50%;
   background-color: #ffffff;
@@ -91,9 +62,18 @@ body {
   align-self: center;
   cursor: pointer;
 }
-.register_button:hover {
+.login_button:hover {
   background-color: #df03fc;
   transform: scale(1.1);
+}
+
+.form_input {
+  margin: 20px;
+}
+.form_input .field_input {
+  border: 5px solid white;
+  border-radius: 20px;
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 600px) {
@@ -105,11 +85,11 @@ body {
     font-size: 15px;
   }
 
-  .register_button {
+  .login_button {
     width: 30%;
     font-size: 15px;
     font-weight: 600;
   }
 }
 
-/*# sourceMappingURL=Registration.css.map */
+/*# sourceMappingURL=Login.css.map */

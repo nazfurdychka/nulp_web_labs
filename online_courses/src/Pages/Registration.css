@@ -24,7 +24,7 @@ body {
 }
 
 .register_form {
-  height: 600px;
+  height: 675px;
   width: 600px;
   display: flex;
   background-color: rgba(255, 255, 255, 0.5);
@@ -62,6 +62,7 @@ body {
 .selector {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 }
 .selector .custom-select {
   margin-top: 20px;
