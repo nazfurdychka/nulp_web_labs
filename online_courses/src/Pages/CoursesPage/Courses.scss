@@ -1,0 +1,59 @@
+@import "../nullable.scss";
+@import "../variables.scss";
+
+$background-img: "../../img/background.png";
+$header-background-img: "../../img/header-background.jpeg";
+
+html {
+  height: 100%;
+}
+
+body {
+  @include background-image;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.table_title {
+  text-align: center;
+  font-family: arial, sans-serif;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.table {
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+  width: 100%;
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  tr {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #ddd;
+  }
+
+  tr:hover {
+    background-color: #ddd;
+  }
+
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: purple;
+    color: white;
+  }
+}
+

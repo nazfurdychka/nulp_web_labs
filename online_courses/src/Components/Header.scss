@@ -1,5 +1,5 @@
-@import "nullable.scss";
-@import "variables.scss";
+@import "../Pages/nullable.scss";
+@import "../Pages/variables.scss";
 
 html {
   height: 100%;
@@ -34,10 +34,5 @@ body {
   a:hover {
     background-color: $white-color;
     color: black;
-  }
-
-  a.active {
-    background-color: rgb(216, 52, 235);
-    color: $white-color;
   }
 }

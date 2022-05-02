@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import './Profile.css';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { encode as base64_encode } from 'base-64';
-import Header from './Header';
+import Header from '../../Components/Header';
 import { decode as base64_decode } from 'base-64';
 
 const Profile = () => {
@@ -146,7 +146,7 @@ const Profile = () => {
 
             <div className="wrapper">
                 <div className="user-image">
-                    <img className="user_profile_img" src={require('../img/profile-image.jpg')} alt="Profile image"/>
+                    <img className="user_profile_img" src={require('../../img/profile-image.jpg')} alt="Profile image"/>
                 </div>
                 <form className="user-profile-form">
                     <h3>First name:</h3>
