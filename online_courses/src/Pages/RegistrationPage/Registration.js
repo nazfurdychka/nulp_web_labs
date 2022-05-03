@@ -82,7 +82,7 @@ const Registration = () => {
     };
 
     if (localStorage.getItem('logged_in_user')) {
-        return <Navigate to="/"/>;
+        return <Navigate to="/profile"/>;
     }
 
     return (<div className="wrapper">

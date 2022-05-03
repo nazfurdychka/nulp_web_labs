@@ -1,5 +1,8 @@
-@import "nullable.scss";
-@import "variables.scss";
+@import "../nullable.scss";
+@import "../variables.scss";
+
+$background-img: "../../img/background.png";
+$header-background-img: "../../img/header-background.jpeg";
 
 html{
   height: 100%;

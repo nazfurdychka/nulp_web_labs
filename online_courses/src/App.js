@@ -2,21 +2,24 @@ import {
     BrowserRouter as Router,
     Routes,
     Route
-} from "react-router-dom";
-import Login from './Pages/Login';
-import Home from './Pages/Home';
-import Registration from './Pages/Registration';
-import Profile from './Pages/Profile';
+} from 'react-router-dom';
 
+import Login from './Pages/LoginPage/Login';
+import Registration from './Pages/RegistrationPage/Registration';
+import Profile from './Pages/ProfilePage/Profile';
+import Courses from './Pages/CoursesPage/Courses';
+import Requests from './Pages/RequestsPage/Requests';
 
 function App() {
+
     return (
         <Router>
             <Routes>
-                <Route exact path='/login' element={<Login />}/>
-                <Route exact path='/' element={<Home />}/>
-                <Route exact path='/registration' element={<Registration />}/>
-                <Route exact path='/profile' element={<Profile />}/>
+                <Route exact path="/registration" element={<Registration/>}/>
+                <Route exact path="/login" element={<Login/>}/>
+                <Route exact path="/profile" element={<Profile/>}/>
+                <Route exact path="/requests" element={<Requests/>}/>
+                <Route exact path="/courses" element={<Courses/>}/>
             </Routes>
         </Router>
     );

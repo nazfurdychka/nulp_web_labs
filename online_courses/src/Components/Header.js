@@ -14,9 +14,9 @@ const Header = () => {
 
     return (<div className="topnav">
 
-        <Link className="active" to="/profile">Profile</Link>
+        <Link to="/profile">Profile</Link>
         <Link to="/courses">Courses</Link>
-        <Link to="/">Joining Requests</Link>
+        <Link to="/requests">Joining Requests</Link>
         <Link onClick={handleLogoutButton} to="/login">Logout</Link>
 
     </div>);
