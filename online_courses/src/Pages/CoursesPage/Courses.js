@@ -207,6 +207,7 @@ const Courses = () => {
     } else {
         headerMessage = 'Courses you enrolled in';
     }
+
     return (coursesData && <div>
             <Header/>
             <h1 className="table_title">{headerMessage}</h1>
@@ -230,7 +231,7 @@ const Courses = () => {
                     </td>
                     <td>{username}</td>
                     <td>
-                        <button type="button"
+                        <button type="button" data-testid="button"
                                 onClick={createCourseButtonHandler}
                                 className="user-profile-button">Create course
                         </button>

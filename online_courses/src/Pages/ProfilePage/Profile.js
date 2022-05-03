@@ -148,7 +148,7 @@ const Profile = () => {
                 <div className="user-image">
                     <img className="user_profile_img" src={require('../../img/profile-image.jpg')} alt="Profile image"/>
                 </div>
-                <form className="user-profile-form">
+                <form className="user-profile-form" name="form">
                     <h3>First name:</h3>
                     <input type="text" className="user_profile__input" name="firstName"
                            onChange={handleChange} value={userData.firstName}/>
