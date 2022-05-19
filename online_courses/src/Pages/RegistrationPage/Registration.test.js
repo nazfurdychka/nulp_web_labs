@@ -16,7 +16,7 @@ describe('Login page', () => {
             .toBeInTheDocument();
     });
 
-    it('logs user in', async () => {
+    it('registers user in', async () => {
         await act(async () => {
             render(<Router><Registration
             /></Router>);
