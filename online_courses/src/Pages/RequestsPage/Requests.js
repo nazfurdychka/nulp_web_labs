@@ -189,7 +189,7 @@ const Requests = () => {
                     <td>{courseName}</td>
                     <td>{studentName}</td>
                     <td>
-                        <button type="button"
+                        <button type="button" data-testid="test"
                                 onClick={(event) => requestOperationHandler(event, request, 'Accept')}
                                 className="user-profile-button">Accept
                         </button>

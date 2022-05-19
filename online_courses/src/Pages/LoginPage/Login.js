@@ -18,7 +18,6 @@ const Login = () => {
     });
 
     const handleChange = e => {
-        console.log(e);
         setErrorMessage(null);
         setUserData({
             ...userData,
@@ -60,8 +59,8 @@ const Login = () => {
 
     return (<div className="wrapper">
 
-        <form className="login_form" onSubmit={loginButtonHandler}>
-            <div className="form_header">Welcome!</div>
+        <form className="login_form" onSubmit={loginButtonHandler} name="form">
+            <div data-testid="welcome_header" className="form_header">Welcome!</div>
 
             <div className="form_input">
                 <h3>Enter username:</h3>
@@ -74,7 +73,7 @@ const Login = () => {
                 <input className="field_input" type="password" name="password"
                        placeholder="Password" onChange={handleChange}/>
             </div>
-            {errorMessage && <div id="error-message">{errorMessage}</div>}
+            {errorMessage && <div data-testid="error-message" id="error-message">{errorMessage}</div>}
             <button className="login_button" type="submit">Sign in</button>
             <div className="form_footer">New member here?   <Link to="/registration">Sign up!</Link></div>
         </form>

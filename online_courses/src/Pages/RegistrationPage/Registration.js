@@ -19,11 +19,10 @@ const Registration = () => {
         lastName: '',
         password: '',
         confirmPassword: '',
-        userType: defaultSelectorValue,
+        userType: 'Student',
     });
 
     const handleChange = e => {
-        console.log(e);
         setErrorMessage(null);
         setUserData({
             ...userData,
@@ -40,7 +39,6 @@ const Registration = () => {
 
     const registerButtonHandler = event => {
         event.preventDefault();
-        console.log(userData);
         if (userData.userType === defaultSelectorValue) {
             setErrorMessage('You should choose user type');
             return;
@@ -86,7 +84,7 @@ const Registration = () => {
     }
 
     return (<div className="wrapper">
-        <form className="register_form" onSubmit={registerButtonHandler}>
+        <form className="register_form" name = "form" onSubmit={registerButtonHandler}>
             <div className="form_header">Registration</div>
             <div className="row_input">
                 <div className="form_input">
@@ -110,11 +108,10 @@ const Registration = () => {
                 <div className="selector">
                     <h3>Choose a user type:</h3>
                     <div className="custom-select">
-                        <select className="user-type" name="userType" id="user-type-selector"
+                        <select className="user-type" name="userType" id="user-type-selector" data-testid="select"
                                 onChange={handleSelectorChange}>
-                            <option value="1">{defaultSelectorValue}</option>
-                            <option value="2">Student</option>
-                            <option value="3">Lector</option>
+                            <option value="1">Student</option>
+                            <option value="2">Lector</option>
                         </select>
                     </div>
                 </div>
